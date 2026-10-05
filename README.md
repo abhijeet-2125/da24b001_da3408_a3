@@ -64,3 +64,9 @@ The peak CPU and memory values above refer to **process-level utilization observ
 | Peak process CPU | **Spark** |
 | Peak process memory | **Ray** |
 | Overall for this ETL workload | **Spark** |
+
+###AI-first vs. BI-first
+AI-first:
+I would lean toward Ray when the project is primarily Python/AI-oriented and needs flexible task execution, model training, inference, or integration with Python-based ML workloads. Ray's Python-first design makes it attractive when distributed computation is closely coupled with AI workflows.
+BI-first:
+I would choose Spark for a BI-first project involving large-scale structured data, SQL/DataFrame transformations, ETL, joins, aggregations, and analytical reporting. My experiment also supports this choice: Spark completed the structured ETL pipeline in 218.87 seconds, compared with 769.64 seconds for Ray.
