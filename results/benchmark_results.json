@@ -1,0 +1,26 @@
+{
+  "input_rows": 117790172,
+  "input_files": 36,
+  "spark": {
+    "framework": "Apache Spark",
+    "version": "4.2.0",
+    "execution_time_seconds": 218.8738,
+    "udf_benchmark_rows": 100000,
+    "udf_time_seconds": 0.4463,
+    "output_rows": 78566491
+  },
+  "ray": {
+    "framework": "Ray Data",
+    "version": "2.59.0",
+    "execution_time_seconds": 769.6395,
+    "udf_benchmark_rows": 100000,
+    "udf_time_seconds": 3.2980,
+    "output_rows": 116527707
+  },
+  "notes": [
+    "The completed Ray benchmark used memory-safe batch-level duplicate removal.",
+    "It did not achieve exact global duplicate-removal parity with Spark.",
+    "A global Ray deduplication attempt became impractically slow on the 8 GB VM.",
+    "Peak CPU and memory values were not captured reproducibly and are therefore not fabricated."
+  ]
+}

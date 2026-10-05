@@ -1,0 +1,10 @@
+data/
+output/
+logs/
+*.parquet
+*.csv
+.venv/
+ray-env/
+__pycache__/
+.DS_Store
+.DS_Store
